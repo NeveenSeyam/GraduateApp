@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:hogo_app/utils/theme/app_colors.dart';
+import 'package:hogo_app/widgets/bottom_navigation.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -68,8 +69,7 @@ class _ShowAllDataState extends State<ShowAllData> {
         actions: [
           GestureDetector(
             onTap: () {
-              Navigator.of(context).pushNamedAndRemoveUntil(
-                  SliderScreen.roudName, (route) => false);
+              Navigator.popAndPushNamed(context, BottomNavigator.roudName);
             },
             child: SizedBox(
               //    width: width * 0.15,

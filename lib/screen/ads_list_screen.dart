@@ -8,6 +8,7 @@ import 'package:hogo_app/widgets/ads_item.dart';
 import 'package:sizer/sizer.dart';
 
 import '../utils/theme/app_colors.dart';
+import '../widgets/bottom_navigation.dart';
 
 class AdsLisstScreen extends StatefulWidget {
   static const roudName = 'AdsLisstScreen';
@@ -50,8 +51,7 @@ class _AdsLisstScreenState extends State<AdsLisstScreen> {
         actions: [
           GestureDetector(
             onTap: () {
-              Navigator.of(context).pushNamedAndRemoveUntil(
-                  SliderScreen.roudName, (route) => false);
+              Navigator.popAndPushNamed(context, BottomNavigator.roudName);
             },
             child: SizedBox(
               //    width: width * 0.15,

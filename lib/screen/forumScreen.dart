@@ -147,8 +147,7 @@ class _forumScreenState extends State<forumScreen> {
                               'like_states': false,
                               'owner_img':
                                   user?.imageUrl ?? "assets/images/man.jpeg",
-                              'post_owner':
-                                  "${user?.firstName} ${user?.lastName}",
+                              'post_owner': "${user?.firstName} ",
                               'post_text': postController.text,
                               "comment": [],
                               'list_comment_number': list_comment_number,

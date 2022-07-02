@@ -229,10 +229,10 @@ class _SliderScreenState extends State<SliderScreen> {
                                 child: GestureDetector(
                                   onTap: () async {
                                     print("item.formUrl ${item.formUrl}");
-                                    if (await canLaunch(item.formUrl ?? '')) {
+                                    if (item.formUrl!.contains("https://")) {
                                       await launch(item.formUrl!);
                                     } else {
-                                      throw "Could not launch ${item.formUrl}";
+                                      await launch("https://${item.formUrl}");
                                     }
                                   },
                                   child: ClipRRect(
@@ -297,10 +297,10 @@ class _SliderScreenState extends State<SliderScreen> {
                                 child: GestureDetector(
                                   onTap: () async {
                                     print("item.formUrl ${item.formUrl}");
-                                    if (await canLaunch(item.formUrl ?? '')) {
+                                    if (item.formUrl!.contains("https://")) {
                                       await launch(item.formUrl!);
                                     } else {
-                                      throw "Could not launch ${item.formUrl}";
+                                      await launch("https://${item.formUrl}");
                                     }
                                   },
                                   child: ClipRRect(
@@ -365,10 +365,10 @@ class _SliderScreenState extends State<SliderScreen> {
                                 child: GestureDetector(
                                   onTap: () async {
                                     print("item.formUrl ${item.formUrl}");
-                                    if (await canLaunch(item.formUrl ?? '')) {
+                                    if (item.formUrl!.contains("https://")) {
                                       await launch(item.formUrl!);
                                     } else {
-                                      throw "Could not launch ${item.formUrl}";
+                                      await launch("https://${item.formUrl}");
                                     }
                                   },
                                   child: ClipRRect(

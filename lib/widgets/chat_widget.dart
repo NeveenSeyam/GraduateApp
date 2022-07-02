@@ -147,9 +147,9 @@ class _ChatWidgetState extends State<ChatWidget> {
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    width: 20,
-                  ),
+                  // const SizedBox(
+                  //   width: 10,
+                  // ),
                   SizedBox(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -166,21 +166,27 @@ class _ChatWidgetState extends State<ChatWidget> {
                                         )),
                               ); //aaas
                             },
-                            child: SizedBox(
-                              width: 40.w,
-                              child: Text(
-                                "${widget.data.docs[widget.index]['post_text'] ?? 0}",
-                                style: const TextStyle(
-                                  fontFamily: 'Arial',
-                                  fontSize: 14,
-                                  color: AppColors.primaryColor,
-                                  fontWeight: FontWeight.w700,
-                                  height: 1.5,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                SizedBox(
+                                  width: 50.w,
+                                  child: Text(
+                                    "${widget.data.docs[widget.index]['post_text'] ?? 0}",
+                                    style: const TextStyle(
+                                      fontFamily: 'Arial',
+                                      fontSize: 14,
+                                      color: AppColors.primaryColor,
+                                      fontWeight: FontWeight.w700,
+                                      height: 1.5,
+                                    ),
+                                    textHeightBehavior:
+                                        const TextHeightBehavior(
+                                            applyHeightToFirstAscent: false),
+                                    softWrap: true,
+                                  ),
                                 ),
-                                textHeightBehavior: const TextHeightBehavior(
-                                    applyHeightToFirstAscent: false),
-                                softWrap: true,
-                              ),
+                              ],
                             ),
                           ),
                         ),

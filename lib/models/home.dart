@@ -6,15 +6,15 @@ class Home {
 }
 
 const String logoPath = 'assets/images/logo.png';
-String clickedContent = "United States";
+String clickedContent = "";
 List<Home> homePageList = [
   Home(title: "el_wehda", imagePath: "assets/cuntry/el_wehda.jfif"),
   Home(title: "gaza", imagePath: "assets/cuntry/gaza.jpg"),
   Home(title: "Rimal", imagePath: "assets/cuntry/Image1.png"),
   Home(title: "metro", imagePath: "assets/cuntry/metro.jpg"),
-  Home(title: "rafah", imagePath: "assets/cuntry/tal_el_hawa.jfif"),
-  Home(title: "Khan-youns", imagePath: "assets/cuntry/nosirat.jpg"),
-  Home(title: "nosirat", imagePath: "assets/cuntry/rafah.jpg"),
+  Home(title: "rafah", imagePath: "assets/cuntry/rafah.jpg"),
+  Home(title: "Khan-youns", imagePath: "assets/cuntry/Khan-youns.jpg"),
+  Home(title: "nosirat", imagePath: "assets/cuntry/nosirat.jpg"),
 ];
 getContryLogoByTitle() {
   switch (clickedContent) {
@@ -22,14 +22,14 @@ getContryLogoByTitle() {
       return "assets/cuntry/el_wehda.jfif";
     case "gaza":
       return "assets/cuntry/gaza.jpg";
-    case "Image1":
+    case "Rimal":
       return "assets/cuntry/Image1.png";
     case "metro":
       return "assets/cuntry/metro.jpg";
     case "rafah":
-      return "assets/cuntry/rafah.jfif";
+      return "assets/cuntry/rafah.jpg";
     case "Khan-youns":
-      return " assets/cuntry/Khan-youns.jpg";
+      return "assets/cuntry/Khan-youns.jpg";
     case "nosirat":
       return "assets/cuntry/nosirat.jpg";
     default:

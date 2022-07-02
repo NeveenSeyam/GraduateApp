@@ -2,6 +2,7 @@ import 'package:csc_picker/csc_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:hogo_app/provider/auth_provider.dart';
 import 'package:hogo_app/utils/theme/app_colors.dart';
+import 'package:hogo_app/widgets/bottom_navigation.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 import '../models/home.dart';
@@ -133,8 +134,8 @@ class _FormScreenState extends State<FormScreen> {
           note2: text3.text,
         )
         .then(
-          (value) => Navigator.of(context)
-              .pushNamedAndRemoveUntil(SliderScreen.roudName, (route) => false),
+          (value) => Navigator.of(context).pushNamedAndRemoveUntil(
+              BottomNavigator.roudName, (route) => false),
         );
 
     _formKey.currentState!.save();

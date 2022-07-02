@@ -9,6 +9,7 @@ import '../utils/theme/app_colors.dart';
 import '../widgets/button_widget.dart';
 import '../widgets/slider_widget.dart';
 import '../widgets/text_widget.dart';
+import 'authentication/sing_in_page.dart';
 import 'authentication/sing_up_page.dart';
 
 class IntroPage extends StatefulWidget {
@@ -55,19 +56,28 @@ class _IntroPageState extends State<IntroPage> {
           SizedBox(
             height: 3.h,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              TextWidget(
-                "Already have account?",
-                color: AppColors.white,
-              ),
-              TextWidget(
-                " SIGN IN",
-                color: AppColors.white,
-                fontWeight: FontWeight.bold,
-              ),
-            ],
+          GestureDetector(
+            onTap: () {
+              //       context.router.push(SingUpPageRoute());
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SingInPage()),
+              );
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                TextWidget(
+                  "Already have account?",
+                  color: AppColors.white,
+                ),
+                TextWidget(
+                  " SIGN IN",
+                  color: AppColors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ],
+            ),
           ),
           SizedBox(
             height: 4.h,

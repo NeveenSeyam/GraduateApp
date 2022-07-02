@@ -10,6 +10,7 @@ import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 import '../screen/slide_screen.dart';
 import '../utils/theme/app_colors.dart';
+import '../widgets/bottom_navigation.dart';
 import '../widgets/drawer.dart';
 
 import 'home_page_screen.dart';
@@ -100,8 +101,7 @@ class _LastFormWirhImagState extends State<LastFormWirhImag> {
           (value) {
             if (value) {
               Navigator.of(context).pop();
-              Navigator.of(context).pushNamedAndRemoveUntil(
-                  SliderScreen.roudName, (route) => false);
+              Navigator.popAndPushNamed(context, BottomNavigator.roudName);
             }
           },
         );

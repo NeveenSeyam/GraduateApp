@@ -8,6 +8,7 @@ import '../provider/content_provider.dart';
 import '../screen/form_screen.dart';
 import '../screen/last_form_with_imag.dart';
 import '../screen/slide_screen.dart';
+import '../widgets/bottom_navigation.dart';
 import '../widgets/drawer.dart';
 import 'event_form.dart';
 import 'home_page_screen.dart';
@@ -32,8 +33,7 @@ class NewForm extends StatelessWidget {
         actions: [
           GestureDetector(
             onTap: () {
-              Navigator.of(context).pushNamedAndRemoveUntil(
-                  SliderScreen.roudName, (route) => false);
+              Navigator.popAndPushNamed(context, BottomNavigator.roudName);
             },
             child: SizedBox(
               //    width: width * 0.15,
